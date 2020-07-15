@@ -7,7 +7,7 @@ html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
+small, strike, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
@@ -47,9 +47,10 @@ table {
 
 
 body{
-    background-color: orange;
+    background-color: #ffbf0e;
     padding-bottom: 100px;
     font-family: 'Roboto', sans-serif;
+    word-spacing: .3em;
 }
    
 
@@ -58,8 +59,8 @@ body{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    border: 1px solid orange;
     border-radius: 50%;
+    filter: drop-shadow(2px 2px 2px rgba(235, 190, 44, 0.8));
 }
 
 .name{
@@ -70,6 +71,7 @@ body{
   letter-spacing: .5px;
   line-height: 44px;
   text-transform: uppercase;
+  text-shadow: 2px 2px 2px #363333;
   
   
 }
@@ -82,6 +84,7 @@ body{
     padding-left: 40px;
     padding-top: 25px;
     padding-right: 40px;
+    padding-bottom: 20px;
 }
 
 .intro{
@@ -94,18 +97,22 @@ table, tr, td, th{
     border: 1px solid black;
 }
 table{
-  margin-right: 20px;
+  margin-right: 5px;
+
 }
 th{
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 5px;
+
   text-align: center;
+  color: #212121;
+  font-weight: bold;
  
   
 }
 td{
   text-align: center;
   padding: 10px;
+  color: #37474f;
 }
 
 ol{
@@ -118,7 +125,7 @@ ul{
 .last-project{
   border-bottom-left-radius: 10px;
   border-bottom-right-radius:10px;
-  padding-bottom: 40px;
+  padding-bottom: 80px;
 }
 
 
@@ -132,18 +139,20 @@ h2 {
   color: #404040;
   font-size: 24px;
   line-height: 44px;
+  text-shadow: 2px 2px 1px #363333;
 }
 h3 {
-  font-size: 21px;
+  font-size: 20px;
 }
 h4 {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 li {
   color: #37474f;
   font-size: 14px;
   font-weight: 400;
+  padding-top: 10px;
 }
 
 p{
@@ -170,3 +179,16 @@ p{
   border-top: 5px solid #7cb342;
 }
 
+a{
+  color: #546e7a;
+  text-decoration: none;
+}
+
+a:hover{
+  color: #a9b2b9;
+  
+}
+
+.project-para, .tech-used{
+  padding: 5px;
+}
