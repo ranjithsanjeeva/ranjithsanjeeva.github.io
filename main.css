@@ -60,7 +60,7 @@ body{
     margin-left: auto;
     margin-right: auto;
     border-radius: 50%;
-    filter: drop-shadow(2px 2px 2px rgba(235, 190, 44, 0.8));
+    filter: drop-shadow(2px 2px 2px rgba(95, 93, 86, 0.4));
 }
 
 .name{
@@ -71,7 +71,6 @@ body{
   letter-spacing: .5px;
   line-height: 44px;
   text-transform: uppercase;
-  text-shadow: 2px 2px 2px #363333;
   
   
 }
@@ -139,7 +138,6 @@ h2 {
   color: #404040;
   font-size: 24px;
   line-height: 44px;
-  text-shadow: 2px 2px 1px #363333;
 }
 h3 {
   font-size: 20px;
