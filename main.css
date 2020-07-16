@@ -47,7 +47,7 @@ table {
 
 
 body{
-    background-color: #ffbf0e;
+    background-color: white;
     padding-bottom: 100px;
     font-family: 'Roboto', sans-serif;
     word-spacing: .3em;
@@ -55,6 +55,8 @@ body{
    
 
 .image1{
+    width: 150px;
+    height: 150px;
     margin-top: 100px;
     display: block;
     margin-left: auto;
@@ -66,7 +68,7 @@ body{
 .name{
   margin-top: 50px;
   color:#263238;
-  font-size: 30px;
+  font-size: 26px;
   font-weight: bold;
   letter-spacing: .5px;
   line-height: 44px;
@@ -79,7 +81,7 @@ body{
     width: 50%;
     margin-left: auto;
     margin-right: auto;
-    background-color: white;
+    background-color: #eeeeee;
     padding-left: 40px;
     padding-top: 25px;
     padding-right: 40px;
@@ -93,25 +95,33 @@ body{
 }
 
 table, tr, td, th{
-    border: 1px solid black;
+    border: 1px solid rgba(51, 46, 46, 0.247);
 }
 table{
   margin-right: 5px;
 
 }
 th{
-  padding: 5px;
-
+  padding: 5px 10px;
   text-align: center;
-  color: #212121;
+  font-size: 12px;
   font-weight: bold;
- 
-  
+  background: #46647a;
+  background: linear-gradient(#49708f, #293f50);
+  color: #fff;
+  vertical-align: middle;
+  text-transform: uppercase;
 }
+
 td{
   text-align: center;
+  font-size: 14px;
+  vertical-align: middle;
   padding: 10px;
   color: #37474f;
+}
+tr:nth-child(even) {
+  background: #fff;
 }
 
 ol{
@@ -158,24 +168,10 @@ p{
 }
 
 
-.objective{
-  border-top: 5px solid #7cb342;
-}
-.education{
+.side-heading{
   border-top: 5px solid #7cb342;
 }
 
-.skills{
-  border-top: 5px solid #7cb342;
-}
-
-.hobbies{
-  border-top: 5px solid #7cb342;
-}
-
-.project{
-  border-top: 5px solid #7cb342;
-}
 
 a{
   color: #546e7a;
