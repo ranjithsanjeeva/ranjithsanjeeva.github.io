@@ -50,7 +50,7 @@ body{
     background-color: white;
     padding-bottom: 100px;
     font-family: 'Roboto', sans-serif;
-    word-spacing: .3em;
+    word-spacing: normal;
 }
    
 
@@ -92,6 +92,7 @@ body{
   margin-top: -75px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  line-height: 18px;
 }
 
 table, tr, td, th{
@@ -129,6 +130,7 @@ ol{
 }
 ul{
   margin-left: 40px;
+  list-style-type: disc;
 }
 
 .last-project{
