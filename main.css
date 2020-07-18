@@ -95,6 +95,10 @@ body{
   line-height: 18px;
 }
 
+.education2{
+  display: none;
+}
+
 table, tr, td, th{
     border: 1px solid rgba(51, 46, 46, 0.247);
 }
@@ -155,7 +159,8 @@ h3 {
   font-size: 20px;
 }
 h4 {
-  font-size: 16px;
+  font-size: 18px;
+  color: #312e2e;
 }
 
 li {
@@ -187,4 +192,61 @@ a:hover{
 
 .project-para, .tech-used{
   padding: 5px;
+}
+
+@media all and (max-width: 1024px){
+  .image1{
+    width: 125px;
+    height: 125px;
+    margin-top: 75px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    filter: drop-shadow(2px 2px 2px rgba(95, 93, 86, 0.4));
+}
+
+.name{
+  margin-top: 50px;
+  color:#263238;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: .4px;
+  line-height: 42px;
+  text-transform: uppercase;
+  
+  
+}
+
+.primary{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #eeeeee;
+    padding-left: 40px;
+    padding-top: 25px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+}
+
+.intro{
+  margin-top: -62.5px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  line-height: 18px;
+}
+.education1{
+  display: none;
+}
+
+.education2{
+  display: block;
+  line-height: 30px;
+}
+.tech-used{
+  line-height: 20px;
+}
+p{
+  line-height: 20px;
+}
 }
