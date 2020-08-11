@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>U&I Game Challenge</h1>
+    <div class="slidecontainer">
+        
+        Speed: <input id="myRange" value="1" type="range" min="1" max="100"  onchange="changeSpeed(this.value)"> <span id="demo"></span>
+        <button onclick="play()">Play</button>
+        <button onclick="pause()">Pause</button>
+        
+    </div>
+    <canvas id="img1"></canvas>
+    <script src="ballGame.js"></script>
+</body>
+</html>
