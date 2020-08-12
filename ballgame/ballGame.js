@@ -13,7 +13,7 @@ var collition = document.getElementById("collition");
 let isRandomX = true;
 let playing=true;
 let i=0;
-
+collition.innerHTML = 0;
 range.oninput = function () {
     this.style.background = 'linear-gradient(to right, #080cc0 0%, #080cc0 ' + this.value + '%, #fff ' + this.value + '%, white 100%)'
 };
