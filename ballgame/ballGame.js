@@ -9,8 +9,11 @@ let animationFrame;
 let intervalID;
 let range = document.getElementById("myRange");
 var output = document.getElementById("demo");
+var collution = document.getElementById("collution");
 let isRandomX = true;
 let playing=true;
+let i=0;
+
 range.oninput = function () {
     this.style.background = 'linear-gradient(to right, #080cc0 0%, #080cc0 ' + this.value + '%, #fff ' + this.value + '%, white 100%)'
 };
@@ -39,15 +42,15 @@ function drawCircle(event) {
         this.update = function () {
             if (this.x + this.radius > innerWidth - 105 || (this.x - 100) - this.radius < 0) {
                 this.dx = -this.dx
+                i++
             }
             if (this.y + this.radius > innerHeight - 70 || this.y - this.radius < 70) {
                 this.dy = -this.dy
+                i++
             }
 
             this.x += this.dx;
             this.y += this.dy;
-            console.log(this.x, this.y);
-
         }
     }
 
@@ -74,6 +77,7 @@ function drawCircle(event) {
     
     if(!intervalID) {
         intervalID =  setInterval(animate,(20-(range.value/5)));
+        setInterval(getCollution,(1000+(20-(range.value/5))));
     }
     animate();
 
@@ -106,4 +110,9 @@ function play(){
     clearInterval(intervalID);
   intervalID = setInterval(animate,(20-(range.value/5)));
   playing = true;
+}
+
+function getCollution(){
+    collution.innerHTML = i;
+    i=0
 }
