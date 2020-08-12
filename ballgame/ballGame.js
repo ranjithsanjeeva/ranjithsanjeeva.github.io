@@ -9,7 +9,7 @@ let animationFrame;
 let intervalID;
 let range = document.getElementById("myRange");
 var output = document.getElementById("demo");
-var collution = document.getElementById("collution");
+var collition = document.getElementById("collition");
 let isRandomX = true;
 let playing=true;
 let i=0;
@@ -77,7 +77,7 @@ function drawCircle(event) {
     
     if(!intervalID) {
         intervalID =  setInterval(animate,(20-(range.value/5)));
-        setInterval(getCollution,(1000+(20-(range.value/5))));
+        setInterval(getCollition,(1000+(20-(range.value/5))));
     }
     animate();
 
@@ -112,7 +112,7 @@ function play(){
   playing = true;
 }
 
-function getCollution(){
-    collution.innerHTML = i;
+function getCollition(){
+    collition.innerHTML = i;
     i=0
 }
