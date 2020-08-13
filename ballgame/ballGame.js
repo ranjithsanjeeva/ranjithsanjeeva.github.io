@@ -10,9 +10,11 @@ let intervalID;
 let range = document.getElementById("myRange");
 var output = document.getElementById("demo");
 var collition = document.getElementById("collition");
+var collition2 = document.getElementById("collition2");
 let isRandomX = true;
 let playing=true;
 let i=0;
+let j=0;
 collition.innerHTML = 0;
 range.oninput = function () {
     this.style.background = 'linear-gradient(to right, #080cc0 0%, #080cc0 ' + this.value + '%, #fff ' + this.value + '%, white 100%)'
@@ -43,10 +45,12 @@ function drawCircle(event) {
             if (this.x + this.radius > innerWidth - 105 || (this.x - 100) - this.radius < 0) {
                 this.dx = -this.dx
                 i++
+                j=j+Math.abs(Math.cos(Math.atan2(this.y, this.x)))
             }
             if (this.y + this.radius > innerHeight - 70 || this.y - this.radius < 70) {
                 this.dy = -this.dy
                 i++
+                j=j+Math.abs(Math.sin(Math.atan2(this.y, this.x)))
             }
 
             this.x += this.dx;
@@ -54,9 +58,6 @@ function drawCircle(event) {
         }
     }
 
-
-
-    console.log("outside1")
     let randomColor = "#" + Math.floor(Math.random() * 25542195).toString(16);
     console.log(randomColor)
     let x = event.clientX;
@@ -84,10 +85,9 @@ function drawCircle(event) {
 }
 function animate(){
        c.clearRect(0,0,innerWidth,innerHeight);
-        for(let i=0;i<circle.length;i++) {
+        for(let i = 0;i<circle.length;i++) {
             circle[i].draw();
         }
-        console.log("outside4")
     }
 
 function changeSpeed(k){
@@ -96,13 +96,12 @@ function changeSpeed(k){
     {
         clearInterval(intervalID);
         intervalID = setInterval(animate,(20-(k/5)));
-        console.log(k)
     }
 }
 
 function pause(){
     clearInterval(intervalID);
-    playing=false;
+    playing = false;
 }
 
 function play(){
@@ -114,5 +113,11 @@ function play(){
 
 function getCollition(){
     collition.innerHTML = i;
-    i=0
+    i = 0;
+    collition2.innerHTML = j;
+    j = 0;
+}
+function getCollition2(){
+    collition2.innerHTML = j;
+    j = 0;
 }
